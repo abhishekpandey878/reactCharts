@@ -17,18 +17,21 @@ class Chart extends Component {
 
   render() {
     return (
-      <div className="chart">
+      <div className="chart" style={{ width: "400px", height: "400px" }}>
         <h2>Bar Chart</h2>
         <Bar
           data={this.state.chartData}
           options={{
-            responsive:true,
+            maintainAspectRatio: false,
+            responsive: true,
             scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
+              yAxes: [
+                {
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                },
+              ],
             },
             title: {
               display: this.props.displayTitle,
@@ -46,13 +49,16 @@ class Chart extends Component {
         <Line
           data={this.state.chartData}
           options={{
-            responsive:true,
+            maintainAspectRatio: false,
+            responsive: true,
             scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
+              yAxes: [
+                {
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                },
+              ],
             },
             title: {
               display: this.props.displayTitle,
@@ -70,14 +76,8 @@ class Chart extends Component {
         <Pie
           data={this.state.chartData}
           options={{
-            responsive:true,
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            },
+            maintainAspectRatio: false,
+            responsive: true,
             title: {
               display: this.props.displayTitle,
               text: "Largest Populations in India",
@@ -94,14 +94,8 @@ class Chart extends Component {
         <Doughnut
           data={this.state.chartData}
           options={{
-            responsive:true,
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            },
+            maintainAspectRatio: false,
+            responsive: true,
             title: {
               display: this.props.displayTitle,
               text: "Largest Populations in India",
