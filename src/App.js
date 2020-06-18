@@ -24,7 +24,7 @@ class App extends Component {
             {
                 label: 'Populations',
                 data: [
-                    617954, 181045, 153060, 106519, 105162, 95072
+                    33, 27, 39, 43, 52, 59
                 ],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.6)',

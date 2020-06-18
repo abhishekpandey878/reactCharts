@@ -22,9 +22,17 @@ class Chart extends Component {
         <Bar
           data={this.state.chartData}
           options={{
+            responsive:true,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
             title: {
               display: this.props.displayTitle,
-              text: "Largest Populations in Countries",
+              text: "Largest Populations in India",
               fontSize: 25,
             },
             legend: {
@@ -38,9 +46,17 @@ class Chart extends Component {
         <Line
           data={this.state.chartData}
           options={{
+            responsive:true,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
             title: {
               display: this.props.displayTitle,
-              text: "Largest Populations in Countries",
+              text: "Largest Populations in India",
               fontSize: 25,
             },
             legend: {
@@ -54,6 +70,14 @@ class Chart extends Component {
         <Pie
           data={this.state.chartData}
           options={{
+            responsive:true,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
             title: {
               display: this.props.displayTitle,
               text: "Largest Populations in India",
@@ -70,9 +94,17 @@ class Chart extends Component {
         <Doughnut
           data={this.state.chartData}
           options={{
+            responsive:true,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
             title: {
               display: this.props.displayTitle,
-              text: "Largest Populations in Countries",
+              text: "Largest Populations in India",
               fontSize: 25,
             },
             legend: {
