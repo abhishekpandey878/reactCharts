@@ -18,6 +18,7 @@ class Chart extends Component {
   render() {
     return (
       <div className="chart">
+        <h2>Bar Chart</h2>
         <Bar
           data={this.state.chartData}
           options={{
@@ -33,6 +34,7 @@ class Chart extends Component {
           }}
         />
 
+        <h2>Line Chart</h2>
         <Line
           data={this.state.chartData}
           options={{
@@ -48,6 +50,7 @@ class Chart extends Component {
           }}
         />
 
+        <h2>Pie Chart</h2>
         <Pie
           data={this.state.chartData}
           options={{
@@ -63,6 +66,7 @@ class Chart extends Component {
           }}
         />
 
+        <h2>Doughnut Chart</h2>
         <Doughnut
           data={this.state.chartData}
           options={{
