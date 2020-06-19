@@ -11,7 +11,11 @@ export default function Line() {
       {
         label: 'Series 2',
         data: [[0, 3], [1, 1], [2, 5], [3, 6], [4, 4]]
-      }
+      },
+      {
+        label: 'Series 3',
+        data: [[0, 2], [1, 3], [2, 6], [3, 4], [4, 6]]
+      },
     ],
     []
   )
