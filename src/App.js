@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Chart from './components/Linechart';
+import Line from './components/Line';
 
 class App extends Component {
   
@@ -43,9 +44,16 @@ class App extends Component {
 
   render() {
     return(
-      <div className="App">
+      <div>
+        <div className="App">
         <h2>React Charts</h2>
         <Chart chartData = {this.state.chartData} />
+        
+      </div>
+      <div align="center">
+        <h2>Simple line chart</h2>
+        <Line />
+      </div>
       </div>
     );
   }
