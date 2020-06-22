@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Chart from './components/Linechart';
-import Line from './components/Line';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Chart from "./components/Linechart";
+import Line from "./components/Line";
+import Formatters from "./components/Formatchart";
 
 class App extends Component {
-  
   constructor() {
     super();
     this.state = {
-      chartData: {}
-    }
+      chartData: {},
+    };
   }
 
   componentWillMount() {
@@ -20,40 +20,48 @@ class App extends Component {
   getChartData() {
     this.setState({
       chartData: {
-        labels: ['Mumbai', 'Pune', 'Hyderabad', 'Bangalore', 'Ahmedabad', 'Calcutta'],
+        labels: [
+          "Mumbai",
+          "Pune",
+          "Hyderabad",
+          "Bangalore",
+          "Ahmedabad",
+          "Calcutta",
+        ],
         datasets: [
-            {
-                label: 'Populations',
-                data: [
-                    33, 27, 39, 43, 52, 59
-                ],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.6)',
-                    'rgba(54, 162, 235, 0.6)',
-                    'rgba(255, 206, 86, 0.6)',
-                    'rgba(75, 192, 192, 0.6)',
-                    'rgba(153, 102, 255, 0.6)',
-                    'rgba(255, 159, 64, 0.6)',
-                    'rgba(255, 99, 132, 0.6)',
-                ]
-            }
-        ]
-    }
+          {
+            label: "Populations",
+            data: [33, 27, 39, 43, 52, 59],
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.6)",
+              "rgba(54, 162, 235, 0.6)",
+              "rgba(255, 206, 86, 0.6)",
+              "rgba(75, 192, 192, 0.6)",
+              "rgba(153, 102, 255, 0.6)",
+              "rgba(255, 159, 64, 0.6)",
+              "rgba(255, 99, 132, 0.6)",
+            ],
+          },
+        ],
+      },
     });
   }
 
   render() {
-    return(
+    return (
       <div>
         <div className="App">
-        <h2>React Charts</h2>
-        <Chart chartData = {this.state.chartData} />
-        
-      </div>
-      <div align="center">
-        <h2>Simple line chart</h2>
-        <Line />
-      </div>
+          <h2>React Charts</h2>
+          <Chart chartData={this.state.chartData} />
+        </div>
+
+        <div align="center">
+          <h2>Simple line chart</h2>
+          <Line />
+
+          <h2>Table Chart</h2>
+          <Formatters />
+        </div>
       </div>
     );
   }
