@@ -12,7 +12,7 @@ class Formatters extends React.Component {
           chartType="Table"
           loader={<div>Loading Chart</div>}
           data={[
-            ["Department", "Revenues Change"],
+            ["Department", "C"],
             ["Shoes", { v: 12, f: "12.0%" }],
             ["Sports", { v: -7.3, f: "-7.3%" }],
             ["Toys", { v: 0, f: "0%" }],

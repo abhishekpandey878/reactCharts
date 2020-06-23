@@ -4,12 +4,16 @@ import "./App.css";
 import Chart from "./components/Linechart";
 import Line from "./components/Line";
 import Formatters from "./components/Formatchart";
+import ProgressBar from "./components/ProgressBar";
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.onIncrease = this.onIncrease.bind(this);
+    this.onDecrease = this.onDecrease.bind(this);
     this.state = {
       chartData: {},
+      percentage: 50,
     };
   }
 
@@ -47,9 +51,24 @@ class App extends Component {
     });
   }
 
+  onIncrease() {
+    this.setState({ percentage: this.state.percentage + 10 });
+  }
+
+  onDecrease() {
+    this.setState({ percentage: this.state.percentage - 10 });
+  }
+
   render() {
     return (
       <div>
+        <div>
+          <h2>Progress Bar</h2>
+          <ProgressBar percentage={this.state.percentage} />
+          <button onClick={this.onIncrease}>+</button>
+          <button onClick={this.onDecrease}>-</button>
+        </div>
+
         <div className="App">
           <h2>React Charts</h2>
           <Chart chartData={this.state.chartData} />
